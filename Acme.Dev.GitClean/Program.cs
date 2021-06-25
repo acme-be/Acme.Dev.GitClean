@@ -31,6 +31,11 @@ namespace Acme.Dev.GitClean
                 ExecuteCommand("git pull");
             }
 
+            if (string.IsNullOrWhiteSpace(options.DevelopBranchName) && string.IsNullOrWhiteSpace(options.MainBranchName))
+            {
+                ExecuteCommand("git pull");
+            }
+
             ExecuteCommand("git remote update origin --prune");
 
             var branches = ExecuteCommand("git branch -vv");
