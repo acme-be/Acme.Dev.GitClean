@@ -86,7 +86,7 @@ namespace Acme.Dev.GitClean
 
             process.Close();
 
-            Console.WriteLine(string.Empty.PadRight(75, '='));
+            Console.WriteLine(string.Empty.PadRight(120, '='));
 
             return output.ToString();
         }
