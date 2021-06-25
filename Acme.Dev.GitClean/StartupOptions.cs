@@ -18,13 +18,13 @@ namespace Acme.Dev.GitClean
         /// </summary>
         /// <value>The MainBranchName.</value>
         [Option('m', "main", Required = false, HelpText = "The name of the main branch.")]
-        public string MainBranchName { get; set; } = "main";
+        public string? MainBranchName { get; set; }
 
         /// <summary>
         /// Gets or sets the DevelopBranchName.
         /// </summary>
         /// <value>The DevelopBranchName.</value>
         [Option('d', "develop", Required = false, HelpText = "The name of the develop branch.")]
-        public string DevelopBranchName { get; set; } = "develop";
+        public string? DevelopBranchName { get; set; }
     }
 }

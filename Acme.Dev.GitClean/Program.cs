@@ -12,10 +12,7 @@ namespace Acme.Dev.GitClean
         static void Main(string[] args)
         {
             Parser.Default.ParseArguments<StartupOptions>(args)
-                .WithParsed(options =>
-                {
-                    ExecuteGitClean(options);
-                });
+                .WithParsed(ExecuteGitClean);
         }
 
         private static void ExecuteGitClean(StartupOptions options)
